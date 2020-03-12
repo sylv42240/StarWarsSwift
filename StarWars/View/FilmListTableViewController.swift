@@ -52,15 +52,12 @@ class FilmListTableViewController: UITableViewController {
                     switch result {
                     case .success(let response): do {
                         let imagePath = try response.map(TMDBResponse<TMDBMovieListResult>.self).results.first?.poster_path
-                        print(imagePath ?? "")
                         movies[index].image_path = imagePath
                         self.state = .ready(movies)
-                    }catch let e{
+                    }catch{
                         self.state = .error
-                        print(e.localizedDescription)
                     }
-                    case .failure(let e):
-                        print(e.localizedDescription)
+                    case .failure( _):
                         self.state = .error
                     }
                 }
@@ -107,12 +104,4 @@ extension FilmListTableViewController {
     return 1
   }
 
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: false)
-
-    //guard case .ready(let items) = state else { return }
-
-    //let comicVC = CardViewController.instantiate(comic: items[indexPath.item])
-    //navigationController?.pushViewController(comicVC, animated: true)
-  }
 }
