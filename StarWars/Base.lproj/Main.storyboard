@@ -14,44 +14,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rjK-D2-c9j">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting Films ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rjK-D2-c9j">
+                            <rect key="frame" x="0.0" y="163" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmCell" rowHeight="72" id="QMq-O7-Vbj" customClass="FilmTableViewCell" customModule="StarWars" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="72"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmCell" rowHeight="107" id="QMq-O7-Vbj" customClass="FilmTableViewCell" customModule="StarWars" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QMq-O7-Vbj" id="AoI-xQ-SKs">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZK-IO-tu3">
-                                            <rect key="frame" x="20" y="11" width="69.5" height="21"/>
+                                            <rect key="frame" x="98" y="32" width="69.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="opZ-aP-1Q2">
+                                            <rect key="frame" x="20" y="11" width="70" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="m6D-SH-zwj"/>
+                                                <constraint firstAttribute="height" constant="85" id="sGq-NR-Gnu"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gV-NS-aMe">
-                                            <rect key="frame" x="20" y="40" width="88" height="21"/>
+                                            <rect key="frame" x="98" y="61" width="88" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8gV-NS-aMe" firstAttribute="bottom" secondItem="AoI-xQ-SKs" secondAttribute="bottomMargin" id="2MM-tM-K3i"/>
-                                        <constraint firstItem="CZK-IO-tu3" firstAttribute="leading" secondItem="AoI-xQ-SKs" secondAttribute="leadingMargin" id="I3i-LA-dHr"/>
-                                        <constraint firstItem="8gV-NS-aMe" firstAttribute="leading" secondItem="AoI-xQ-SKs" secondAttribute="leadingMargin" id="cD5-OF-QUD"/>
-                                        <constraint firstItem="CZK-IO-tu3" firstAttribute="top" secondItem="AoI-xQ-SKs" secondAttribute="topMargin" id="jis-xQ-D37"/>
-                                        <constraint firstItem="8gV-NS-aMe" firstAttribute="top" secondItem="CZK-IO-tu3" secondAttribute="bottom" constant="8" id="ki9-dO-39a"/>
+                                        <constraint firstItem="opZ-aP-1Q2" firstAttribute="bottom" secondItem="AoI-xQ-SKs" secondAttribute="bottomMargin" id="4CV-Eg-p6r"/>
+                                        <constraint firstItem="CZK-IO-tu3" firstAttribute="leading" secondItem="8gV-NS-aMe" secondAttribute="leading" id="RuZ-qd-6U6"/>
+                                        <constraint firstItem="CZK-IO-tu3" firstAttribute="leading" secondItem="opZ-aP-1Q2" secondAttribute="trailing" constant="8" id="Urs-yv-fn7"/>
+                                        <constraint firstItem="CZK-IO-tu3" firstAttribute="top" secondItem="AoI-xQ-SKs" secondAttribute="topMargin" constant="21" id="WEG-uo-1HO"/>
+                                        <constraint firstItem="opZ-aP-1Q2" firstAttribute="leading" secondItem="AoI-xQ-SKs" secondAttribute="leadingMargin" id="kg7-jG-y0N"/>
+                                        <constraint firstItem="8gV-NS-aMe" firstAttribute="top" secondItem="CZK-IO-tu3" secondAttribute="bottom" constant="8" id="og7-5y-Uhe"/>
+                                        <constraint firstItem="opZ-aP-1Q2" firstAttribute="top" secondItem="AoI-xQ-SKs" secondAttribute="topMargin" id="qtX-rn-l89"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="filmDate" destination="8gV-NS-aMe" id="qah-Mh-7lv"/>
+                                    <outlet property="filmImage" destination="opZ-aP-1Q2" id="F7E-Uq-W1V"/>
                                     <outlet property="filmTitle" destination="CZK-IO-tu3" id="EHf-kR-OFk"/>
                                 </connections>
                             </tableViewCell>

@@ -15,6 +15,9 @@ struct Film: Codable {
     let director: String
     let producer: String
     let release_date: String
+    var image_path: String?
     
-    
+    func getImagePath() -> URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500" + (image_path ?? ""))!
+    }
 }

@@ -14,7 +14,9 @@ class FilmListTableViewController: UITableViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
-    let provider = MoyaProvider<Swapi>()
+    let swapiProvider = MoyaProvider<Swapi>()
+    let tmdbProvider = MoyaProvider<TMDB>()
+    
     
     private var state: State = .loading {
       didSet {
@@ -37,13 +39,34 @@ class FilmListTableViewController: UITableViewController {
 
       state = .loading
 
-      provider.request(.film) { [weak self] result in
+      swapiProvider.request(.film) { [weak self] result in
         guard let self = self else { return }
 
         switch result {
         case .success(let response):
           do {
-            self.state = .ready(try response.map(SwapiFilmsResponse<Film>.self).results)
+            var movies = try response.map(SwapiFilmsResponse<Film>.self).results
+            for index in 0...movies.count-1{
+                self.tmdbProvider.request(.search(movies[index].title)){ [weak self] result in
+                    guard let self = self else { return }
+                    switch result {
+                    case .success(let response): do {
+                        let imagePath = try response.map(TMDBResponse<TMDBMovieListResult>.self).results.first?.poster_path
+                        print(imagePath ?? "")
+                        movies[index].image_path = imagePath
+                        self.state = .ready(movies)
+                    }catch let e{
+                        self.state = .error
+                        print(e.localizedDescription)
+                    }
+                    case .failure(let e):
+                        print(e.localizedDescription)
+                        self.state = .error
+                    }
+                }
+            }
+            
+            self.state = .ready(movies)
           } catch {
             self.state = .error
           }
@@ -76,7 +99,7 @@ extension FilmListTableViewController {
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard case .ready(let items) = state else { return 0 }
-
+    
     return items.count
   }
 
