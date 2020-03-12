@@ -3,27 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0871A69F241A333700663E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A69E241A333700663E48 /* AppDelegate.swift */; };
 		0871A6A1241A333700663E48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A6A0241A333700663E48 /* SceneDelegate.swift */; };
-		0871A6A3241A333700663E48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A6A2241A333700663E48 /* ViewController.swift */; };
 		0871A6A6241A333700663E48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0871A6A4241A333700663E48 /* Main.storyboard */; };
 		0871A6A8241A333800663E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0871A6A7241A333800663E48 /* Assets.xcassets */; };
 		0871A6AB241A333800663E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0871A6A9241A333800663E48 /* LaunchScreen.storyboard */; };
+		0871A6B4241A33F800663E48 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0871A6B3241A33F800663E48 /* Moya */; };
+		0871A6B6241A3BDE00663E48 /* FilmListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A6B5241A3BDE00663E48 /* FilmListTableViewController.swift */; };
+		0871A6B8241A3C8600663E48 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A6B7241A3C8600663E48 /* FilmTableViewCell.swift */; };
+		0871A6BA241A3DAB00663E48 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A6B9241A3DAB00663E48 /* Film.swift */; };
+		0871A6BC241A3F9C00663E48 /* Swapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A6BB241A3F9C00663E48 /* Swapi.swift */; };
+		0871A6BE241A409000663E48 /* CodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871A6BD241A409000663E48 /* CodableResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0871A69B241A333700663E48 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0871A69E241A333700663E48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0871A6A0241A333700663E48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0871A6A2241A333700663E48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0871A6A5241A333700663E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0871A6A7241A333800663E48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0871A6AA241A333800663E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0871A6AC241A333800663E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0871A6B5241A3BDE00663E48 /* FilmListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListTableViewController.swift; sourceTree = "<group>"; };
+		0871A6B7241A3C8600663E48 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		0871A6B9241A3DAB00663E48 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		0871A6BB241A3F9C00663E48 /* Swapi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swapi.swift; sourceTree = "<group>"; };
+		0871A6BD241A409000663E48 /* CodableResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableResponses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0871A6B4241A33F800663E48 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +68,15 @@
 			children = (
 				0871A69E241A333700663E48 /* AppDelegate.swift */,
 				0871A6A0241A333700663E48 /* SceneDelegate.swift */,
-				0871A6A2241A333700663E48 /* ViewController.swift */,
 				0871A6A4241A333700663E48 /* Main.storyboard */,
 				0871A6A7241A333800663E48 /* Assets.xcassets */,
 				0871A6A9241A333800663E48 /* LaunchScreen.storyboard */,
 				0871A6AC241A333800663E48 /* Info.plist */,
+				0871A6B5241A3BDE00663E48 /* FilmListTableViewController.swift */,
+				0871A6B7241A3C8600663E48 /* FilmTableViewCell.swift */,
+				0871A6B9241A3DAB00663E48 /* Film.swift */,
+				0871A6BB241A3F9C00663E48 /* Swapi.swift */,
+				0871A6BD241A409000663E48 /* CodableResponses.swift */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";
@@ -83,6 +97,9 @@
 			dependencies = (
 			);
 			name = StarWars;
+			packageProductDependencies = (
+				0871A6B3241A33F800663E48 /* Moya */,
+			);
 			productName = StarWars;
 			productReference = 0871A69B241A333700663E48 /* StarWars.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 0871A692241A333700663E48;
+			packageReferences = (
+				0871A6B2241A33F800663E48 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 0871A69C241A333700663E48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0871A6A3241A333700663E48 /* ViewController.swift in Sources */,
+				0871A6BE241A409000663E48 /* CodableResponses.swift in Sources */,
+				0871A6BA241A3DAB00663E48 /* Film.swift in Sources */,
+				0871A6B6241A3BDE00663E48 /* FilmListTableViewController.swift in Sources */,
+				0871A6B8241A3C8600663E48 /* FilmTableViewCell.swift in Sources */,
 				0871A69F241A333700663E48 /* AppDelegate.swift in Sources */,
+				0871A6BC241A3F9C00663E48 /* Swapi.swift in Sources */,
 				0871A6A1241A333700663E48 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0871A6B2241A33F800663E48 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0871A6B3241A33F800663E48 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0871A6B2241A33F800663E48 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0871A693241A333700663E48 /* Project object */;
 }
