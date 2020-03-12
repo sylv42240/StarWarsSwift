@@ -72,13 +72,45 @@
 				0871A6A7241A333800663E48 /* Assets.xcassets */,
 				0871A6A9241A333800663E48 /* LaunchScreen.storyboard */,
 				0871A6AC241A333800663E48 /* Info.plist */,
-				0871A6B5241A3BDE00663E48 /* FilmListTableViewController.swift */,
-				0871A6B7241A3C8600663E48 /* FilmTableViewCell.swift */,
-				0871A6B9241A3DAB00663E48 /* Film.swift */,
+				0871A6C0241A485300663E48 /* View */,
+				0871A6C2241A486E00663E48 /* Model */,
+				0871A6BF241A475200663E48 /* Network */,
+			);
+			path = StarWars;
+			sourceTree = "<group>";
+		};
+		0871A6BF241A475200663E48 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				0871A6BB241A3F9C00663E48 /* Swapi.swift */,
 				0871A6BD241A409000663E48 /* CodableResponses.swift */,
 			);
-			path = StarWars;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0871A6C0241A485300663E48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0871A6B5241A3BDE00663E48 /* FilmListTableViewController.swift */,
+				0871A6C1241A485C00663E48 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0871A6C1241A485C00663E48 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0871A6B7241A3C8600663E48 /* FilmTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0871A6C2241A486E00663E48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0871A6B9241A3DAB00663E48 /* Film.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

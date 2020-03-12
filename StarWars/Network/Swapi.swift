@@ -9,7 +9,7 @@ public enum Swapi {
 
 extension Swapi: TargetType {
   public var baseURL: URL {
-    return URL(string: "https://swapi.co/api/")!
+    return URL(string: "https://swapi.co/api")!
   }
 
   public var path: String {
@@ -29,12 +29,9 @@ extension Swapi: TargetType {
   }
 
   public var task: Task {
-
-
     switch self {
     case .film:
-        return .requestParameters(parameters: [:],
-                                encoding: URLEncoding.default)
+        return .requestParameters(parameters: [:], encoding: URLEncoding.default)
     }
   }
 

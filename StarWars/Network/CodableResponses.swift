@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct SwapiResponse<T: Codable>: Codable {
-  let data: SwapiResults<T>
-}
-
-struct SwapiResults<T: Codable>: Codable {
+struct SwapiFilmsResponse<T: Codable>: Codable {
   let results: [T]
 }
